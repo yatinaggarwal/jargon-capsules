@@ -1,0 +1,13 @@
+{
+    "key": "react",
+    "type": "library",
+    "desc": "Created by facebook, virtual dom based dom manipulation library",
+    "relatedTo": [],
+    "children": [
+        {
+            "key": "react-redux",
+            "type": "library"
+        }
+    ],
+    "detailsLink": "https://react.org"
+}
