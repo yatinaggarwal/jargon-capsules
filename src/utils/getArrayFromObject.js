@@ -1,3 +1,3 @@
-const getArrayFromObject = (obj) => {
-
-}
+export const getArrayFromObject = (obj) => {
+  console.log('Hello');
+};
