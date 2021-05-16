@@ -1,0 +1,27 @@
+{
+  "name": "jargon-capsules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newtonflash/jargon-capsules.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newtonflash/jargon-capsules/issues"
+  },
+  "homepage": "https://github.com/newtonflash/jargon-capsules#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "umbrellajs": "^3.2.3"
+  }
+}
