@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Jargon Capsules</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="title">Web Jargon <span>Capsules</span></h1>
-        <div class="global-search">
-            <input id="searchInput" type="search" placeholder="Search" />
-            <button>Home</button>
-        </div>
+      <h1 class="title">Web Jargon <span>Capsules</span></h1>
+      <div class="global-search">
+        <input id="searchInput" type="search" placeholder="Search" />
+        <button>Home</button>
+      </div>
     </header>
     <div class="canvas">
-        <div class="main-capsule"><span class="keyword">React</span><span class="info">i</span></div>
+      <div class="main-capsule">
+        <span class="keyword">React</span><span class="info">i</span>
+      </div>
+      <canvas id="thisCan" width="0px" height="0px">
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
     </div>
     <footer>
-        <div class="color-pallet">
-            <div class="color-circle color__tool">Tool</div>
-            <div class="color-circle color__service">Service</div>
-            <div class="color-circle color__concept">Concept</div>
-            <div class="color-circle color__language">Language</div>
-            <div class="color-circle color__process">Process</div>
-            <div class="color-circle color__library">Library</div>
-            <div class="color-circle color__similar">Similar</div>
-        </div>
-        <div class="footer__share">
-            <button class="share-btn">Share</button>
-        </div>
+      <div class="color-pallet">
+        <div class="color-circle color__tool">Tool</div>
+        <div class="color-circle color__service">Service</div>
+        <div class="color-circle color__concept">Concept</div>
+        <div class="color-circle color__language">Language</div>
+        <div class="color-circle color__process">Process</div>
+        <div class="color-circle color__library">Library</div>
+        <div class="color-circle color__similar">Similar</div>
+      </div>
+      <div class="footer__share">
+        <button class="share-btn">Share</button>
+      </div>
     </footer>
-    
+    <canvas
+      id="myCanvas"
+      width="1000"
+      height="1000"
+      style="border: 1px solid #d3d3d3"
+    >
+      Your browser does not support the HTML5 canvas tag.</canvas
+    >
+
     <script src="src/ui/index.js"></script>
-</body>
+    <script src="src/ui/canvas.js"></script>
+  </body>
 </html>
