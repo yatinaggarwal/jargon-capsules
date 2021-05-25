@@ -3,10 +3,10 @@ import u from 'umbrellajs';
 export const search = (inp, arr) => {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
-  var currentFocus;
+  let currentFocus;
   /*execute a function when someone writes in the text field:*/
   inp.on('input', function () {
-    var a,
+    let a,
       b,
       i,
       val = this.value;
@@ -50,7 +50,7 @@ export const search = (inp, arr) => {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.on('keydown', function (e) {
-    var x = document.getElementById(this.id + 'autocomplete-list');
+    let x = document.getElementById(this.id + 'autocomplete-list');
     if (x) x = x.getElementsByTagName('div');
     if (e.keyCode == 40) {
       /*If the arrow DOWN key is pressed,
@@ -93,7 +93,7 @@ export const search = (inp, arr) => {
   function closeAllLists(elmnt) {
     /*close all autocomplete lists in the document,
     except the one passed as an argument:*/
-    var x = document.getElementsByClassName('autocomplete-items');
+    let x = document.getElementsByClassName('autocomplete-items');
     for (let el of x) {
       if (elmnt != el && elmnt != inp) {
         el.parentNode.removeChild(el);
