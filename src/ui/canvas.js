@@ -9,9 +9,8 @@ function initialCanvas() {
 
 function createArrow(sx, sy, ex, ey, ctx) {
   ctx.beginPath();
-  console.log(sx, sy, ex, ey);
   ctx.moveTo(sx, sy);
-  ctx.bezierCurveTo(ex, sy, sx, ey, ex, ey);
+  ctx.bezierCurveTo(ex, sy, sx - ((sx - ex) / 2), ey, ex, ey);
 
   ctx.stroke();
 }
@@ -23,3 +22,10 @@ createArrow(500, 400, 300, 400, ctx);
 createArrow(500, 400, 300, 500, ctx);
 createArrow(500, 400, 300, 600, ctx);
 createArrow(500, 400, 300, 700, ctx);
+
+createArrow(900, 400, 1200, 200, ctx);
+createArrow(900, 400, 1200, 300, ctx);
+createArrow(900, 400, 1200, 400, ctx);
+createArrow(900, 400, 1200, 500, ctx);
+createArrow(900, 400, 1200, 600, ctx);
+createArrow(900, 400, 1200, 700, ctx);
