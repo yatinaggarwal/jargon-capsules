@@ -114,11 +114,29 @@ input[type='search'] {
   height: 100vh;
   min-height: 600px;
 }
-.main-capsule {
+
+.capsule{
+  transform: translate(-50%, -50%);
   position: absolute;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  font-size: 14px;
+  border-radius: 18px;
+  border: 1px solid #ccc;
+}
+
+.capsule .keyword{
+  display: inline-block;
+  padding: 10px 15px 10px 20px;
+  font-weight: bold;
+}
+.capsule .info{
+  display: none;
+}
+
+.main-capsule {
   left: calc(50%);
   top: calc(50%);
-  background-color: #f0f0f0;
   border-radius: 25px;
   border: 5px solid black;
   overflow: hidden;
