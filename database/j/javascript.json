@@ -1,0 +1,45 @@
+{
+  "key": "javascript",
+  "label": "JavaScript",
+  "type": "language",
+  "desc": "JavaScript is the programming language of the Web",
+  "relatedTo": [],
+  "children": [
+    {
+      "key": "reactjs",
+      "label": "ReactJS",
+      "type": "library"
+    },
+    {
+      "key": "angularjs",
+      "label": "AngularJS",
+      "type": "library"
+    },
+    {
+      "key": "vuejs",
+      "label": "VueJS",
+      "type": "library"
+    },
+    {
+      "key": "jquery",
+      "label": "jQuery",
+      "type": "library"
+    },
+    {
+      "key": "umbrellajs",
+      "label": "UmbrellaJS",
+      "type": "library"
+    },
+    {
+      "key": "backbonejs",
+      "label": "BackboneJS",
+      "type": "library"
+    },
+    {
+      "key": "nodejs",
+      "label": "NodeJS",
+      "type": "library"
+    }
+  ],
+  "detailsLink": "https://www.javascript.com/"
+}
