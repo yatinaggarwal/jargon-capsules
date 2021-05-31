@@ -1,11 +1,10 @@
-function initialCanvas() {
+export const initialCanvas = () => {
   const c = document.getElementById('myCanvas');
   const context = c.getContext('2d');
-
   context.canvas.width = window.innerWidth;
   context.canvas.height = window.innerHeight;
   return context;
-}
+};
 
 function createArrow(sx, sy, ex, ey, ctx) {
   ctx.beginPath();
@@ -15,10 +14,8 @@ function createArrow(sx, sy, ex, ey, ctx) {
   ctx.stroke();
 }
 
-const ctxt = initialCanvas();
-
-export const createArrows = (cords = []) => {
+export const createArrows = (cords = [], ctx = {}) => {
   for (let cord of cords) {
-    createArrow(cord.start.x, cord.start.y, cord.end.x, cord.end.y, ctxt);
+    createArrow(cord.start.x, cord.start.y, cord.end.x, cord.end.y, ctx);
   }
 };

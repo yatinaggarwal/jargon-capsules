@@ -6,16 +6,16 @@
   "relatedTo": [],
   "children": [
     {
-      "key": "react",
-      "label": "ReactJS",
-      "type": "library",
-      "hasChildren": true
-    },
-    {
       "key": "angularjs",
       "label": "AngularJS",
       "type": "library",
       "hasChildren": false
+    },
+    {
+      "key": "react",
+      "label": "ReactJS",
+      "type": "library",
+      "hasChildren": true
     },
     {
       "key": "vuejs",

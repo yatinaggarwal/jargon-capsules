@@ -12,6 +12,12 @@
       "hasChildren": false
     },
     {
+      "key": "javascript",
+      "label": "JavaScript",
+      "type": "language",
+      "hasChildren": true
+    },
+    {
       "key": "enzyme",
       "label": "Enzyme",
       "type": "library",

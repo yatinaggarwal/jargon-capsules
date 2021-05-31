@@ -114,7 +114,6 @@ input[type='search'] {
   border-radius: 18px;
   border: 1px solid #ccc;
 }
-
 .capsule .keyword {
   display: inline-block;
   padding: 10px 15px 10px 20px;
@@ -122,6 +121,11 @@ input[type='search'] {
 }
 .capsule .info {
   display: none;
+}
+.child-capsule.clickable:hover {
+  color: #f0f0f0;
+  background-color: #555;
+  cursor: pointer;
 }
 .main-capsule {
   left: calc(50%);
@@ -134,6 +138,7 @@ input[type='search'] {
   display: inline-block;
   padding: 10px 15px 10px 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 .main-capsule .info {
   display: inline-block;
