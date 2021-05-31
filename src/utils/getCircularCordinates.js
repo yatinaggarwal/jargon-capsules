@@ -20,8 +20,8 @@ export const getCircularCords = ({
   /**
    * add some spacing based on the number of elements.
    */
-  const leftXPos = -100 + (-canvasWidth / 80) * leftSideItemCount;
-  const rightXPos = 100 + (canvasWidth / 80) * rightSideItemsCount;
+  const leftXPos = -100 + (-canvasWidth / 35) * leftSideItemCount;
+  const rightXPos = 100 + (canvasWidth / 35) * rightSideItemsCount;
 
   for (let leftCount = 0; leftCount < leftSideItemCount; leftCount++) {
     const direction = leftCount % 2 === 0 ? 1 : -1;
