@@ -16,7 +16,10 @@ u('.capsule.child .label').on('click', (e) => {
 });
 
 export const createCapsules = (capsulesList = [], mainCapsuleData = {}) => {
-  const mainCapsule = `<span class="keyword">${mainCapsuleData.label}</span><span class="info">i</span>`;
+  const mainCapsule = `<span class="keyword">${mainCapsuleData.label}</span>
+                        <span class="info tooltip">i
+                            <span class="tooltiptext">${mainCapsuleData.desc}</span>
+                        </span>`;
   const mainCapsuleInstance = u('#capsuleContainer .main-capsule').append(
     mainCapsule
   );
