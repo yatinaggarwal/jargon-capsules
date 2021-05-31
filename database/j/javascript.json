@@ -6,39 +6,46 @@
   "relatedTo": [],
   "children": [
     {
-      "key": "reactjs",
+      "key": "react",
       "label": "ReactJS",
-      "type": "library"
+      "type": "library",
+      "hasChildren": true
     },
     {
       "key": "angularjs",
       "label": "AngularJS",
-      "type": "library"
+      "type": "library",
+      "hasChildren": false
     },
     {
       "key": "vuejs",
       "label": "VueJS",
-      "type": "library"
+      "type": "library",
+      "hasChildren": false
     },
     {
       "key": "jquery",
       "label": "jQuery",
-      "type": "library"
+      "type": "library",
+      "hasChildren": false
     },
     {
       "key": "umbrellajs",
       "label": "UmbrellaJS",
-      "type": "library"
+      "type": "library",
+      "hasChildren": false
     },
     {
       "key": "backbonejs",
       "label": "BackboneJS",
-      "type": "library"
+      "type": "library",
+      "hasChildren": false
     },
     {
       "key": "nodejs",
       "label": "NodeJS",
-      "type": "library"
+      "type": "library",
+      "hasChildren": false
     }
   ],
   "detailsLink": "https://www.javascript.com/"

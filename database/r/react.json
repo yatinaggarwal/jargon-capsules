@@ -1,13 +1,34 @@
 {
-    "key": "react",
-    "type": "library",
-    "desc": "Created by facebook, virtual dom based dom manipulation library",
-    "relatedTo": [],
-    "children": [
-        {
-            "key": "react-redux",
-            "type": "library"
-        }
-    ],
-    "detailsLink": "https://react.org"
+  "key": "react",
+  "label": "ReactJS",
+  "type": "library",
+  "desc": "Created by facebook, virtual dom based dom manipulation library",
+  "relatedTo": [],
+  "children": [
+    {
+      "key": "redux",
+      "label": "Redux",
+      "type": "library",
+      "hasChildren": false
+    },
+    {
+      "key": "enzyme",
+      "label": "Enzyme",
+      "type": "library",
+      "hasChildren": false
+    },
+    {
+      "key": "mobx",
+      "label": "MobX",
+      "type": "library",
+      "hasChildren": false
+    },
+    {
+      "key": "styled-components",
+      "label": "Styled Components",
+      "type": "library",
+      "hasChildren": false
+    }
+  ],
+  "detailsLink": "https://reactjs.org/"
 }
