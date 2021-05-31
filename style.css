@@ -115,7 +115,7 @@ input[type='search'] {
   min-height: 600px;
 }
 
-.capsule{
+.capsule {
   transform: translate(-50%, -50%);
   position: absolute;
   background-color: #f0f0f0;
@@ -125,12 +125,12 @@ input[type='search'] {
   border: 1px solid #ccc;
 }
 
-.capsule .keyword{
+.capsule .keyword {
   display: inline-block;
   padding: 10px 15px 10px 20px;
   font-weight: bold;
 }
-.capsule .info{
+.capsule .info {
   display: none;
 }
 
