@@ -6,10 +6,10 @@ export const getCircularCords = ({
   const itemHeight = 40;
   /**
    *  spacing between two items in vertical direction
-   *  10 being minimum and 64 being the optimized balance. the spacing will decrease as the number of
+   *  8 being minimum and 64 being the optimized balance. the spacing will decrease as the number of
    *  items grow.
    */
-  const verticalSpacing = 10 + 64 / (itemsCount * Math.log10(itemsCount));
+  const verticalSpacing = 8 + 64 / (itemsCount * Math.log10(itemsCount));
 
   // split the values into two arrays or left and right calculation.
   const leftSideItemCount = parseInt(itemsCount / 2);

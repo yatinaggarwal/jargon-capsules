@@ -1,7 +1,7 @@
 let events = {};
 let hop = events.hasOwnProperty;
 
-const subscribe = (event, callback) => {
+export const subscribe = (event, callback) => {
     if(!hop.call(events, event)) events[event] = [];
 
     const indexOfListener = events[event].push(callback) - 1;
@@ -12,11 +12,15 @@ const subscribe = (event, callback) => {
     }
 }
 
-const publish = (event, data=null) => {
+export const publish = (event, data=null) => {
     // no action needed if event does not have any listener.
     if(!hop.call(events, event)) return;
 
     events[event].forEach(callback=>{
         callback(data)
     })
+}
+
+export const customEvents = {
+    "ON_WIN_RESIZE":'on window resize'
 }

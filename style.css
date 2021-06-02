@@ -1,3 +1,13 @@
+:root{
+  --color-tool:deeppink;
+  --color-service:orange;
+  --color-concept:#b093ff;
+  --color-language:greenyellow;
+  --color-process:dodgerblue;
+  --color-library:coral;
+  --color-competitor:lightpink;
+  --color-related:lightgrey;
+}
 * {
   margin: 0;
   padding: 0;
@@ -61,26 +71,30 @@ footer {
   border-radius: 50%;
 }
 .color__tool:before {
-  background-color: deeppink;
+  background-color: var(--color-tool);
 }
 .color__service:before {
-  background-color: orange;
+  background-color: var(--color-service);
 }
 .color__concept:before {
-  background-color: #b093ff;
+  background-color: var(--color-concept);
 }
 .color__language:before {
-  background-color: greenyellow;
+  background-color: var(--color-language);
 }
 .color__process:before {
-  background-color: dodgerblue;
+  background-color: var(--color-process);
 }
 .color__library:before {
-  background-color: coral;
+  background-color: var(--color-library);
 }
-.color__similar:before {
+.color__competitor:before {
+  background-color: lightpink;
+}
+.color__related:before{
   background-color: lightgrey;
 }
+
 button {
   padding: 4px 8px;
   background-color: transparent;
@@ -109,15 +123,37 @@ input[type='search'] {
 .capsule {
   transform: translate(-50%, -50%);
   position: absolute;
-  background-color: #f0f0f0;
+  background-color: #fff;
   font-size: 14px;
   border-radius: 18px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
 }
+
+.capsule.type-tool{
+  border-color:var(--color-tool) ;
+}
+.capsule.type-service{
+  border-color:var(--color-service) ;
+}
+.capsule.type-concept{
+  border-color:var(--color-concept) ;
+}
+.capsule.type-language{
+  border-color:var(--color-language) ;
+}
+
+.capsule.type-process{
+  border-color:var(--color-process) ;
+}
+
+.capsule.type-library{
+  border-color:var(--color-library) ;
+}
+
 .capsule .keyword {
   display: inline-block;
-  padding: 10px 15px 10px 20px;
-  font-weight: bold;
+  padding: 8px 20px 8px 20px;
+  letter-spacing: .5px;
 }
 .capsule .info {
   display: none;
@@ -142,13 +178,19 @@ input[type='search'] {
 }
 .main-capsule .info {
   display: inline-block;
-  padding: 10px 20px 10px 15px;
-  width: 20px;
-  background-color: white;
+  padding: 10px 20px 10px 20px;
+  background-color: #f0f0f0;
   font-style: italic;
   font-family: 'Times New Roman';
   cursor: pointer;
-  border-radius: 0px 20px 20px 0px;
+  color: black;
+  border-radius: 50%;
+
+}
+.main-capsule .info:hover{
+  color: white;
+  background-color: black;
+
 }
 .tooltip {
   position: relative;
