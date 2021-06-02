@@ -3,6 +3,7 @@ import { keywords } from '../../cache/keywords';
 import { search } from './search';
 import { fetchCapsules } from './fetchCapsules';
 import { getPrevCapsule } from '../utils/maintainNavigationState';
+import { publish, customEvents } from '../utils/events';
 
 // global search functionality
 const searchInput = u('#searchInput');
@@ -28,5 +29,9 @@ u('.canvas').on('click', () => {
 
 search(searchInput, keywords);
 
-// fetch capsules on first load
+// fetch capsules
 fetchCapsules('html');
+
+window.addEventListener('resize', () => {
+  publish(customEvents.ON_WIN_RESIZE);
+});
