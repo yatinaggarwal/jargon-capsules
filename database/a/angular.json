@@ -1,0 +1,34 @@
+{
+  "key": "angular",
+  "label": "Angular",
+  "type": "library",
+  "desc": "Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.",
+  "relatedTo": [],
+  "children": [
+    {
+      "key": "angularjs",
+      "label": "AngularJS",
+      "type": "library",
+      "hasChildren": false
+    },
+    {
+      "key": "react",
+      "label": "ReactJS",
+      "type": "library",
+      "hasChildren": true
+    },
+    {
+      "key": "vue",
+      "label": "VueJS",
+      "type": "library",
+      "hasChildren": false
+    },
+    {
+      "key": "backbonejs",
+      "label": "BackboneJS",
+      "type": "library",
+      "hasChildren": false
+    }
+  ],
+  "detailsLink": "https://angular.io/"
+}

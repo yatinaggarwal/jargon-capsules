@@ -1,22 +1,9 @@
 /*An array containing all the keywords*/
 export const keywords = [
   'Accessibility',
-  'Amber',
   'Angular',
-  'CSS',
-  'Flutter',
-  'GraphQL',
   'HTML',
   'JavaScript',
-  'jQuery',
-  'Less',
-  'NodeJS',
-  'Parcel',
+  'CSS',
   'React',
-  'Redux',
-  'Rollup',
-  'Sass',
-  'UmberallaJS',
-  'VueJS',
-  'Webpack',
 ];

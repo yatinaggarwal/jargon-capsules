@@ -1,18 +1,18 @@
-import u from "umbrellajs";
-import { keywords } from "../../cache/keywords";
-import { search } from "./search";
-import { fetchCapsules } from "./fetchCapsules";
-import { getPrevCapsule } from "../utils/maintainNavigationState";
-import {publish, customEvents} from "../utils/events";
+import u from 'umbrellajs';
+import { keywords } from '../../cache/keywords';
+import { search } from './search';
+import { fetchCapsules } from './fetchCapsules';
+import { getPrevCapsule } from '../utils/maintainNavigationState';
+import { publish, customEvents } from '../utils/events';
 
 // global search functionality
-const searchInput = u("#searchInput");
+const searchInput = u('#searchInput');
 
-let initialCapsule = "javascript";
+let initialCapsule = 'html';
 let oneClick = false;
 let navigationHistory = [];
 
-u(".canvas").on("click", () => {
+u('.canvas').on('click', () => {
   if (oneClick) {
     let prevCap = getPrevCapsule();
     if (prevCap) {
@@ -30,8 +30,8 @@ u(".canvas").on("click", () => {
 search(searchInput, keywords);
 
 // fetch capsules
-fetchCapsules("javascript");
+fetchCapsules('html');
 
-window.addEventListener("resize", ()=>{
+window.addEventListener('resize', () => {
   publish(customEvents.ON_WIN_RESIZE);
-})
+});

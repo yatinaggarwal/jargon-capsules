@@ -6,14 +6,40 @@
   "relatedTo": [],
   "children": [
     {
-      "key": "javascript",
-      "label": "JavaScript",
-      "type": "language"
-    },
-    {
       "key": "css",
       "label": "CSS",
-      "type": "language"
+      "type": "language",
+      "hasChildren": true
+    },
+    {
+      "key": "javascript",
+      "label": "JavaScript",
+      "type": "language",
+      "hasChildren": true
+    },
+    {
+      "key": "accessibility",
+      "label": "Accessibility",
+      "type": "concept",
+      "hasChildren": true
+    },
+    {
+      "key": "xhtml",
+      "label": "XHTML",
+      "type": "language",
+      "hasChildren": false
+    },
+    {
+      "key": "xml",
+      "label": "XML",
+      "type": "language",
+      "hasChildren": false
+    },
+    {
+      "key": "jsp",
+      "label": "JSP",
+      "type": "language",
+      "hasChildren": false
     }
   ],
   "detailsLink": "https://developer.mozilla.org/en-US/docs/Web/HTML"

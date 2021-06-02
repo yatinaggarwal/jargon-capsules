@@ -6,10 +6,10 @@
   "relatedTo": [],
   "children": [
     {
-      "key": "angularjs",
-      "label": "AngularJS",
+      "key": "angular",
+      "label": "Angular",
       "type": "library",
-      "hasChildren": false
+      "hasChildren": true
     },
     {
       "key": "react",

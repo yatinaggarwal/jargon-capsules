@@ -1,9 +1,9 @@
-import u from "umbrellajs";
-import { getCircularCords } from "../utils/getCircularCordinates";
-import { setPrevCapsule } from "../utils/maintainNavigationState";
-import { initialCanvas, createArrows } from "./canvas";
-import { createCapsules } from "./capsule";
-import {customEvents, subscribe} from "../utils/events";
+import u from 'umbrellajs';
+import { getCircularCords } from '../utils/getCircularCordinates';
+import { setPrevCapsule } from '../utils/maintainNavigationState';
+import { initialCanvas, createArrows } from './canvas';
+import { createCapsules } from './capsule';
+import { customEvents, subscribe } from '../utils/events';
 
 const getCordInfo = (capsuleData) => {
   const targetNodesCoordinates = getCircularCords({
@@ -20,24 +20,24 @@ const getCordInfo = (capsuleData) => {
     return {
       start: startPoint,
       end: item,
-      ...capsuleData.children[count]
+      ...capsuleData.children[count],
     };
   });
 
   return {
     arrowsCoordinates,
-    startPoint
+    startPoint,
   };
-}
+};
 
 export const fetchCapsules = async (
-  maincapsule = "html",
+  maincapsule = 'html',
   backAction = false
 ) => {
   setPrevCapsule(maincapsule, backAction);
-  const canvasExistingInstance = u("#myCanvas");
-  const mainCapsuleExistingInstance = u("#main-capsule-section");
-  const childCapsuleExistingInstance = u(".child-capsule");
+  const canvasExistingInstance = u('#myCanvas');
+  const mainCapsuleExistingInstance = u('#main-capsule-section');
+  const childCapsuleExistingInstance = u('.child-capsule');
   if (
     mainCapsuleExistingInstance.nodes.length &&
     childCapsuleExistingInstance.nodes.length
@@ -55,17 +55,17 @@ export const fetchCapsules = async (
   )
     .then((response) => response.json())
     .catch((err) => {
-      console.log("Error fetching data " + err);
+      console.log('Error fetching data ' + err);
     });
 
-  const {arrowsCoordinates, startPoint} = getCordInfo(capsuleData);
+  const { arrowsCoordinates, startPoint } = getCordInfo(capsuleData);
 
   createArrows(arrowsCoordinates, canvasContext);
   createCapsules(arrowsCoordinates, capsuleData, startPoint);
 
-  subscribe(customEvents.ON_WIN_RESIZE, ()=>{
-    const {arrowsCoordinates, startPoint} = getCordInfo(capsuleData);
+  subscribe(customEvents.ON_WIN_RESIZE, () => {
+    const { arrowsCoordinates, startPoint } = getCordInfo(capsuleData);
     createArrows(arrowsCoordinates, canvasContext);
     createCapsules(arrowsCoordinates, capsuleData, startPoint);
-  })
+  });
 };

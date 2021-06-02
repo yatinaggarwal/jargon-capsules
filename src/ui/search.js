@@ -1,4 +1,4 @@
-import u from 'umbrellajs';
+import { fetchCapsules } from './fetchCapsules';
 
 export const search = (inp, arr) => {
   /*the autocomplete function takes two arguments,
@@ -36,13 +36,13 @@ export const search = (inp, arr) => {
         /*execute a function when someone clicks on the item value (DIV element):*/
         b.addEventListener('click', function () {
           /*insert the value for the autocomplete text field:*/
-          inp.nodes[0].value = this.getElementsByTagName('input')[0].value;
-          u('.main-capsule .keyword').text(
-            this.getElementsByTagName('input')[0].value
-          );
+          const autocompleteValue = this.getElementsByTagName('input')[0].value;
+          inp.nodes[0].value = autocompleteValue;
           /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
           closeAllLists();
+          /*fetch capsule based on selected auto suggested value*/
+          fetchCapsules(autocompleteValue.toLocaleLowerCase());
         });
         a.appendChild(b);
       }

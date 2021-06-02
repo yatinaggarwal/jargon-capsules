@@ -1,0 +1,34 @@
+{
+  "key": "accessibility",
+  "label": "Accessibility",
+  "type": "concept",
+  "desc": "Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them.",
+  "relatedTo": [],
+  "children": [
+    {
+      "key": "nvda",
+      "label": "NVDA",
+      "type": "tool",
+      "hasChildren": false
+    },
+    {
+      "key": "voiceover",
+      "label": "VoiceOver",
+      "type": "tool",
+      "hasChildren": false
+    },
+    {
+      "key": "aria",
+      "label": "Aria Attributes",
+      "type": "concept",
+      "hasChildren": false
+    },
+    {
+      "key": "w3c",
+      "label": "W3C Validator",
+      "type": "concept",
+      "hasChildren": false
+    }
+  ],
+  "detailsLink": "https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+}
