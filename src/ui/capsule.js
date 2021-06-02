@@ -1,8 +1,8 @@
-import u from 'umbrellajs';
-import { fetchCapsules } from './fetchCapsules';
+import u from "umbrellajs";
+import { fetchCapsules } from "./fetchCapsules";
 
 const createCapsule = (config, childCapsule, container) => {
-  const hasChildrenClass = childCapsule.hasChildren ? 'clickable' : '';
+  const hasChildrenClass = childCapsule.hasChildren ? "clickable" : "";
   const capsule = `<div class="capsule child-capsule ${hasChildrenClass}" style="top:${config.end.y}px;left: ${config.end.x}px">
                     <span class="keyword ${childCapsule.key}">${childCapsule.label}</span>
                     <span class="info">i</span>
@@ -10,7 +10,8 @@ const createCapsule = (config, childCapsule, container) => {
   const capsuleInstance = u(container).append(capsule);
 
   // handle click on child capsules
-  u(`.child-capsule .${childCapsule.key}`).on('click', () => {
+  u(`.child-capsule .${childCapsule.key}`).on("click", (e) => {
+    e.stopPropagation();
     return childCapsule.hasChildren ? fetchCapsules(childCapsule.key) : null;
   });
 
@@ -20,8 +21,9 @@ const createCapsule = (config, childCapsule, container) => {
 };
 
 export const createCapsules = (capsulesList = [], mainCapsuleData = {}) => {
-  const handleMainCapsuleClick = () => {
-    window.open(mainCapsuleData.detailsLink, '_blank');
+  const handleMainCapsuleClick = (e) => {
+    e.stopPropagation();
+    window.open(mainCapsuleData.detailsLink, "_blank");
   };
   const mainCapsule = `<div id="main-capsule-section">
                           <span class="keyword">${mainCapsuleData.label}</span>
@@ -29,15 +31,15 @@ export const createCapsules = (capsulesList = [], mainCapsuleData = {}) => {
                               <span class="tooltiptext">${mainCapsuleData.desc}</span>
                           </span>
                       </div>`;
-  const mainCapsuleInstance = u('#capsuleContainer .main-capsule').append(
+  const mainCapsuleInstance = u("#capsuleContainer .main-capsule").append(
     mainCapsule
   );
-  u('.main-capsule .keyword').on('click', handleMainCapsuleClick);
+  u(".main-capsule .keyword").on("click", handleMainCapsuleClick);
   for (let capsuleItem = 0; capsuleItem < capsulesList.length; capsuleItem++) {
     createCapsule(
       capsulesList[capsuleItem],
       mainCapsuleData.children[capsuleItem],
-      '#capsuleContainer'
+      "#capsuleContainer"
     );
   }
   return mainCapsuleInstance;
